@@ -1,9 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { TransactionsContext } from './globalContext';
 
 
 export default function Main() {
-    let transactions = useContext(TransactionsContext)
+    let { transactions, addTransaction } = useContext(TransactionsContext)
+    let [newDesc, setDesc] = useState('');
+    let [newAmount, setAmount] = useState(0);
+
+    function handleAddition(event) {
+        event.preventDefault();
+        addTransaction({
+            amount: newAmount,
+            desc: newDesc
+        })
+    }
     return (
         <div className="container">
             <h1 className="text-center">Expense Tracker</h1>
@@ -29,17 +39,17 @@ export default function Main() {
             </ul>
             <h3>Add new transaction</h3>
             <hr />
-            <form className="transaction-form">
+            <form className="transaction-form" onSubmit={handleAddition}>
                 <label>
                     Enter Description
                     <br />
-                    <input type="text" required />
+                    <input type="text" required onChange={(env) => setDesc(env.target.value)} />
                 </label>
                 <br />
                 <label>
                     Enter Amount
                     <br />
-                    <input type="number" required />
+                    <input type="number" required onChange={(env) => setAmount(env.target.value)} />
                 </label>
                 <br />
 

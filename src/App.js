@@ -1,11 +1,13 @@
 import './App.css';
 import Main from './Main';
-// import { TransactionsContext } from './globalContext';
+import { TransactionProvider } from './globalContext';
 function App() {
   return (
+    <TransactionProvider>
       <div>
         <Main />
       </div>
+    </TransactionProvider>
 
   );
 }
