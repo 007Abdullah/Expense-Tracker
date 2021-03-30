@@ -13,7 +13,6 @@ export default function Main() {
             alert("Please Correct value");
             return false;
         }
-        localStorage.setItem("data", JSON.stringify(transactions))
         addTransaction({
             amount: Number(newAmount),
             desc: newDesc
