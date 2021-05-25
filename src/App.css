@@ -1,37 +1,45 @@
-
-.container{
+.container {
   max-width: 350px;
   min-height: 400px;
   margin: 0 auto;
-  background-color: #efefef;
-  box-shadow: 0 0 10px gray;
-  margin-top:10px ;
+
+
+  margin-top: 10px;
   padding: 15px 50px;
+  color: cadetblue
 }
-.text-center{
-  text-align: center;
+
+.text-center {
+  text-align: center
 }
-.expense-container{
+
+.expense-container {
   display: flex;
   justify-content: space-around;
-  background-color:white;
+  background-color: white;
   box-shadow: 0 0 10px gray;
-
 }
+
 .transaction-form input {
   width: 100%;
-  margin-top: 10px ;
+  margin-top: 10px;
   padding: 5px 5px;
 }
-.transaction-list{
+
+.transaction-list {
   margin: 0;
   padding: 0;
 }
-.transaction-list > li{
+
+.transaction-list>li {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0 10px gray;
   padding: 10px 5px;
   margin: 5px 0;
   background-color: white;
+}
+
+.del {
+  background-color: red;
 }

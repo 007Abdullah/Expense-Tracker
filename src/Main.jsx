@@ -53,9 +53,11 @@ export default function Main() {
                     return (
                         <li key={index}>
                             <span>{transObj.desc}</span>
-                            <span>{transObj.amount}<span className="del" onClick={() => {
-                                deletItem(index)
-                            }}>========X</span> </span>
+                            <span >{transObj.amount}
+                                <span className="del" onClick={() => {
+                                    deletItem(index)
+                                }}>X</span>
+                            </span>
                         </li>
                     )
                 })}
